@@ -13,5 +13,7 @@ let package = Package(
     targets: [
         .target(name: "CArgon2"),
         .target(name: "Crypto", dependencies: ["CArgon2", "Zewo"]),
+
+        .testTarget(name: "CryptoTests", dependencies: ["Crypto"]),
     ]
 )
