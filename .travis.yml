@@ -1,0 +1,17 @@
+os:
+  - linux
+  - osx
+language: generic
+sudo: false
+dist: trusty
+osx_image: xcode8.3
+addons:
+  apt:
+    sources:
+      - sourceline: 'deb [trusted=yes] http://apt.zewo.io ./'
+    packages:
+      - zewo
+install:
+  - eval "$(curl -sL http://sh.zewo.io/install-zewo.sh)"
+script:
+  - eval "$(curl -sL http://sh.zewo.io/build.sh)"
